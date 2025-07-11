@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Heart Failure Risk Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        form {
+            background-color: #fff;
+            padding: 25px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            width: 350px;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            color: #555;
+            font-weight: bold;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 8px 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+        input[type="submit"] {
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            background-color: #007BFF;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h2>Heart Failure Risk Prediction</h2>
+    <form action="/predict" method="post">
+
+        <label for="age">Age:</label>
+        <input type="number" name="age" step="any" required>
+
+        <label for="creatinine_phosphokinase">Creatinine Phosphokinase:</label>
+        <input type="number" name="creatinine_phosphokinase" step="any" required>
+
+        <label for="ejection_fraction">Ejection Fraction:</label>
+        <input type="number" name="ejection_fraction" step="any" required>
+
+        <label for="platelets">Platelets:</label>
+        <input type="number" name="platelets" step="any" required>
+
+        <label for="serum_creatinine">Serum Creatinine:</label>
+        <input type="number" name="serum_creatinine" step="any" required>
+
+        <label for="serum_sodium">Serum Sodium:</label>
+        <input type="number" name="serum_sodium" step="any" required>
+
+        <label for="time">Follow-up Time (in Days):</label>
+        <input type="number" name="time" step="any" required>
+
+        <input type="submit" value="Predict Risk">
+    </form>
+</body>
+</html>
+
+
